@@ -1,0 +1,47 @@
+<html>
+   <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex17</title>
+    <link rel="stylesheet" href="principal.css">
+   </head> 
+
+        <script>
+            function multi()
+    {
+        var x, y, resul;
+        
+      y = parseInt(document.multiplica.txty.value);
+      
+         
+      for(x=1; x<11; x++)
+        {
+            resul= x*y
+        document.getElementById("operação" + x).innerHTML= "<tr>" + x + "x" + y + " = " + resul + "</tr>";
+        }
+
+    }
+        </script>
+    <body> 
+        <form name="multiplica">
+            Número 1: <input type="text" name="txty" value="0"><br>
+            
+             
+           <input type="button" name="butmultiplicar" value="Multiplicação" onclick="multi();">
+
+        </form>
+        <table border="5">
+            <tr id="operação1"></tr>
+            <tr id="operação2"></tr>
+            <tr id="operação3"></tr>
+            <tr id="operação4"></tr>
+            <tr id="operação5"></tr>
+            <tr id="operação6"></tr>
+            <tr id="operação7"></tr>
+            <tr id="operação8"></tr>
+            <tr id="operação9"></tr>
+            <tr id="operação10"></tr>
+        </table>
+       
+    </body>
+</html>

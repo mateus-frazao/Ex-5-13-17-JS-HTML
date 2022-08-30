@@ -1,0 +1,54 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+    <script lang="javascript">
+    
+        function triângulo()
+        {
+            
+            var a, b, c;
+            
+
+            a = parseInt(document.triangulo.txta.value);
+            b = parseInt(document.triangulo.txtb.value);
+            c = parseInt(document.triangulo.txtc.value);
+            
+        
+      
+            if((a==b) && (a==c))
+            {
+                document.getElementById("destino").innerHTML="Esse é um triângulo equilátero";
+                document.getElementById("imagem").innerHTML = "<img src='equilatero.png'>";
+                
+            }
+
+          else if ((a!=b) && (b!=c) && (c!=a))
+            {
+                document.getElementById("destino").innerHTML="Esse é um triângulo escaleno";
+                document.getElementById("imagem").innerHTML = "<img src='escaleno.png'>";
+            }
+        
+            else 
+            {
+                document.getElementById("destino").innerHTML="Esse é um triângulo isósceles";
+                document.getElementById("imagem").innerHTML = "<img src='isosceles.png'>";
+            }
+
+        }
+
+    </script>
+<body>
+
+    <form name="triangulo">
+        Lado 1: <input type="text" name="txta" value="0"><br>
+        Lado 2: <input type="text" name="txtb" value="0"><br>
+        Lado 3: <input type="text" name="txtc" value="0"><br>
+                <input type="button" name="buttriangulo" value="Triângulo" onclick="triângulo();">
+    </form>
+
+    <p id="destino"></p>
+    <p id="imagem"></p>
+</body>
+</html>
